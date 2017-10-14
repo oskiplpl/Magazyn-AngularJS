@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Magazyn</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="/content/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/content/fontello/css/fontello.css" rel="stylesheet" type="text/css" />
+    <script src="/app/lib/angular.min.js"></script>
+    <script src="/app/app.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+    <div class="content" ng-controller="myController">
+
+        <div class="title">
+            <div class="name-title">Nazwa:</div>
+            <div class="quantity-title">Dostępna ilość:</div>
+            <div style="clear: both"></div>
+        </div>
+
+        <hr>
+
+        <ul>
+            <li ng-repeat="article in articles">
+                <div class="article">
+                    <div class="left">
+                        <div class="remove-button" ng-click="removeArticle(article)"><i class="icon-cancel-circled"></i></div>
+
+                        <div ng-if="article.quantity == 0" class="name" style="color: red">{{article.name}}</div>
+                        <div ng-if="article.quantity < 10 && article.quantity > 0" class="name" style="color: orange">{{article.name}}</div>
+                        <div ng-if="article.quantity >= 10" class="name">{{article.name}}</div>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="right">
+                        <div class="plus-button" ng-click="increasArticleQuantity(article)"><i class="icon-plus"></i></div>
+                        <div class="quantity">{{article.quantity}}</div>
+                        <div class="minus-button" ng-click="decreasArticleQuantity(article)"><i class="icon-minus"></i></div>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div style="clear: both"></div>
+                    
+                </div>
+                <hr>
+            </li>
+        </ul>
+
+        <form ng-submit="addArticle()">
+            <div>Dodaj artykuł do listy</div>
+            <div class="form-inputs">
+                <input class="name-input" ng-model="addedArticleName" type="text" required placeholder="Nazwa">
+                <input class="quantity-input" ng-model="addedArticleQuantity" type="number" min="0" required placeholder="Ilość">
+                <button type="submit">Dodaj</button>
+            </div>
+        </form>
+        <hr>
+    </div>
+
+    <footer>
+        Oskar Morawiec
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+body {
+    background: lightgrey;
+    padding-top: 30px;
+    font-family: 'Lato', sans-serif; 
+    font-size: 14px;
+}
+
+ul {
+    -webkit-padding-start: 0;    
+    -ms-padding-start: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.content {
+    width: 700px;
+    margin: auto;
+}
+
+.article {
+    padding: 0px;
+    font-size: 20px;
+    margin: 30px 0 30px 0;
+}
+
+.name-title {
+    margin-left: 63px;
+    width: 455px;
+    float: left;
+}
+
+.quantity-title {
+    margin-right: 35px; 
+    float: right;
+}
+
+.right {
+    width: 180px;
+    margin-right: 20px;
+    float: left;
+}
+
+.left {
+    width: 480px;
+    margin-left: 20px;
+    float: left;
+}
+
+.name {
+    width: auto;
+    float: left;
+}
+
+.quantity {
+    text-align: center;
+    min-width: 50px;    
+    margin: 0 15px 0 15px;
+    float: right;
+}
+
+.plus-button {
+    color: green;
+    float: right;
+}
+
+.minus-button {
+    color: red;
+    float: right;
+}
+
+.minus-button:hover,
+.plus-button:hover {
+    cursor: pointer;
+}
+
+.remove-button {
+    margin-right: 15px;
+    float: left;
+    -webkit-transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.remove-button:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+form {
+    margin: 0 20px 25px 20px;
+}
+
+.form-inputs {
+    margin: 5px 0 5px 0;
+    height: 30px;
+}
+
+.form-inputs button {
+    background-color: #c1c1c1;
+    border: solid 1px #a1a1a1;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    height: 28px;
+    width: 68px;
+}
+
+.form-inputs button:hover {
+    background-color: #b1b1b1;
+}
+
+.name-input {
+    border: solid 1px #b1b1b1;
+    background: white;
+    width: 479px;
+    height: 25px;
+    font-size: 18px;
+}
+
+.quantity-input {
+    border: solid 1px #b1b1b1;    
+    background: white;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;    
+}
+
+footer {
+    text-align: center;
+    font-size: 10px;
+}
